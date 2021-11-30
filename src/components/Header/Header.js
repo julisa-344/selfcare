@@ -7,9 +7,9 @@ const Header = () => {
     <BrowserRouter>
       <header className="header">
         <img className="header-banner" src={imagenes.banerQuizz}/>
-        <Link to="/">
+        <h1>
           Quizz
-        </Link>
+        </h1>
       </header>
     </BrowserRouter>
   );

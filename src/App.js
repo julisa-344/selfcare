@@ -5,35 +5,44 @@ import { useState } from "react";
 import { Header } from "./components/Header/Header";
 import { Home } from "./Pages/Home/Home";
 import { Quiz } from "./Pages/Quiz/Quiz";
-import { Result } from "./Pages/Result/Result";
+import {Facts} from "./Pages/Facts/Facts";
+import { Wrong } from "./Pages/Wrong/Wrong"
+import { Right } from "./Pages/Right/Right"
 
 function App() {
   const [name, setName] = useState();
-  const fetchQuestions = () =>{
-
-  }
+  const fetchQuestions = () => {};
   return (
     <Router>
       <div className="App">
-        <Header />
         <Switch>
           <Route path="/" exact>
-            <Home 
-            name={name} 
-            setName={setName} 
-            fetchQuestions={fetchQuestions}
+            <Header />
+            <Home
+              name={name}
+              setName={setName}
+              fetchQuestions={fetchQuestions}
             />
-            
           </Route>
 
           <Route path="/quiz">
             <Quiz />
           </Route>
 
-          <Route path="/result">
-            <Result />
+          <Route path="/facts">
+            <Facts />
           </Route>
+
+          <Route path="/wrong">
+            <Wrong />
+          </Route>
+
+          <Route path="/right">
+            <Right />
+          </Route>
+
         </Switch>
+
       </div>
     </Router>
   );

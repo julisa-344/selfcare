@@ -12,24 +12,20 @@
   padding: 24px;
   display: grid;
   place-items: center;
+  background-color: var(--main-bg-color);
 }
-.form-control.input,
-.form-select,
-.btn-primary.Btn {
-  background-color: var(--secondary-bg-color);
-  border-radius: 16px;
-  border: none;
+.Home-container input, .form-select{
   padding: 16px;
-  box-sizing: border-box;
+  border-radius: 16px;
+  font-size: 1.6rem;
+  background-color: var(--secondary-bg-color);
   color: var(--sure-bg-color);
 }
 .form-control.input::placeholder {
   color: var(--sure-bg-color);
 }
-.btn-primary.Btn {
-  width: 100%;
+.btn-primary.Btn-secondary {
   margin: 32px 0;
-  box-sizing: border-box;
   background-color: var(--sure-bg-color);
   color:var(--main-bg-color)
 }

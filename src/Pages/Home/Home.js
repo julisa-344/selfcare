@@ -1,4 +1,5 @@
 import "./Home.css";
+import "../../App.css"
 import { useState } from "react";
 import { useHistory } from "react-router";
 import {ErrorMessage} from "../../components/ErrorMessage/ErrorMessage";
@@ -7,7 +8,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
     const [difficulty, setDifficulty] = useState("");
     const [error, setError] = useState(false);
   
-    const history = useHistory();
+    const browserHistory = useHistory();
   
     const handleSubmit = () => {
       if ( !difficulty || !name) {
@@ -16,7 +17,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
       } else {
         setError(false);
         fetchQuestions(difficulty);
-        history.push("/quiz");
+        browserHistory.push("/quiz");
       }
     };
 
@@ -53,7 +54,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
 
           <button 
           type="button" 
-          class="btn btn-primary Btn"
+          class="btn btn-primary Btn Btn-secondary"
           onClick={handleSubmit}>
             Comenzar Quiz
           </button>

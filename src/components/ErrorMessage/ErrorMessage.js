@@ -3,12 +3,13 @@ const ErrorMessage = ({ children }) => {
     <div
       style={{
         width: "100%",
-        padding: 10,
-        marginBottom: 10,
-        borderRadius: 4,
-        backgroundColor: "orangered",
+        padding: 8,
+        marginBottom: 16,
+        borderRadius: 16,
+        fontSize: "1.6rem",
+        backgroundColor: "#EB6084",
         textAlign: "center",
-        color: "white",
+        color: "var(--sure-bg-color)",
         textTransform: "capitalize",
       }}
     >

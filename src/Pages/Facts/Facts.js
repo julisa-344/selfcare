@@ -1,10 +1,7 @@
-import "./Quiz.css";
-import "../../App.css"
 import { useState } from "react";
-import { Right } from "../Right/Right";
-import { Wrong } from "../Wrong/Wrong"
+import "./Facts.css"
 
-const Quiz = () => {
+const Facts = () => {
   const questions = [
     {
       questionText:
@@ -118,57 +115,22 @@ const Quiz = () => {
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showScore, setShowScore] = useState(false);
-  const [score, setScore] = useState(0);
-
-  const answerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-
-    const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      setShowScore(true);
-    }
-  };
-
   return (
-    <section className="container-quiz">
-      {showScore ? (
-        <h2 className="score-section">
-          Tu puntaje es {score} de {questions.length}
-        </h2>
-      ) : (
-        <>
-          <section className="question-section">
-            
-              <h2 className="question-count">Pregunta {currentQuestion + 1}/{questions.length}</h2>
-            
-            <p className="question-text">
-              {questions[currentQuestion].questionText}
-            </p>
-            
-          </section>
-          <section className="answer-section">
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button
-                class="btn btn-primary Btn"
-                onClick={() => answerOptionClick(answerOption.isCorrect)}
-              >
-                {answerOption.answerText}
+    <di>
+      <h2 className="fact-h2">Facts</h2>
+      <section 
+      className="container-quiz fact-container-quiz"
+      >
+      <p>
+      {questions[currentQuestion].fact}
+      </p>
+      <button class="btn btn-primary Btn">
+        Siguiente
+      </button>
 
-              </button>
-            ))}
-          </section>
-
-
-
-        </>
-      )}
-    </section>
+      </section>
+    </di>
   );
 };
 
-export { Quiz };
+export { Facts };
