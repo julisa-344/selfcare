@@ -29,3 +29,18 @@
   background-color: var(--sure-bg-color);
   color:var(--main-bg-color)
 }
+.btn-difficulty {
+  width: 100%;
+  margin: 12px 0;
+  padding: 16px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 16px;
+  box-shadow: 2px 5px 10px 0px var(--sure-bg-color);
+  border: none;
+}
+.btn-difficulty h2 {
+  margin-bottom: 0;
+}
+.btn-difficulty:active{
+  background-color: #eb6084;
+}

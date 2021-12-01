@@ -3,6 +3,7 @@
   --secondary-bg-color: #EBC96B;
   --sure-bg-color:#FFFFFF;
   --dark-bg-color: #181725;
+  --sure-grey:#F4F5FA;
 }
 * {
   margin: 0;
@@ -26,13 +27,20 @@ p {
   font-weight: 300;
   color: var(--dark-bg-color);
 }
+h1 {
+  position: relative;
+  font-size: 32px;
+  color: var(--sure-bg-color);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
 h2 {
   margin-bottom: 32px;
   font-family: 'Quicksand', sans-serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  color: var(--sure-bg-color)
+  color: var(--sure-bg-color);
 }
 h3 {
   font-family:'Quicksand', sans-serif ;
@@ -53,4 +61,9 @@ h3 {
   border-radius: 16px;
   border: none;
   font-size: 1.6rem;
+}
+.Btn:hover {
+  box-shadow: 2px 5px 10px 0px var(--sure-bg-color);
+  background-color: #eb6084;
+  color: var(--sure-bg-color);
 }

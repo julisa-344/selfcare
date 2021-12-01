@@ -1,4 +1,4 @@
-import wrong from "../../assets/wrong.PNG";
+import wrong from "./assets/wrong.PNG";
 
 const Wrong = () => {
   return (

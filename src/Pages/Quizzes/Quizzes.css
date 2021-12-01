@@ -1,0 +1,63 @@
+:root {
+    --main-bg-color: #96C7C1;
+    --secondary-bg-color: #EBC96B;
+    --sure-bg-color:#FFFFFF;
+    --dark-bg-color: #181725;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 8px;
+    background-color: grey;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--dark-bg-color);
+  }
+  h1 {
+    position: relative;
+    font-size: 32px;
+    color: var(--sure-bg-color);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+  }
+  h2 {
+    margin-bottom: 32px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--sure-bg-color);
+  }
+  h3 {
+    font-family:'Quicksand', sans-serif ;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .App {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    background-color: var(--sure-bg-color);
+  }
+  
+  .Btn {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: none;
+    font-size: 1.6rem;
+  }

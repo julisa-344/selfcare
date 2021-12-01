@@ -1,27 +1,21 @@
-import { BrowserRouter as Router, Switch, Route, link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import { Quizzes } from "./Pages/Quizzes/Quizzes";
+import { Quiz } from "./Pages/Quizzes/Quiz/Quiz";
+import {Facts} from "./Pages/Quizzes/Facts/Facts";
+import { Wrong } from "./Pages/Quizzes/Wrong/Wrong"
+import { Right } from "./Pages/Quizzes/Right/Right"
 
-import { useState } from "react";
-import { Header } from "./components/Header/Header";
-import { Home } from "./Pages/Home/Home";
-import { Quiz } from "./Pages/Quiz/Quiz";
-import {Facts} from "./Pages/Facts/Facts";
-import { Wrong } from "./Pages/Wrong/Wrong"
-import { Right } from "./Pages/Right/Right"
+import {Filter} from "./Pages/Filter/Filter"
 
 function App() {
-  const [name, setName] = useState();
-  const fetchQuestions = () => {};
   return (
     <Router>
       <div className="App">
+
         <Switch>
-          <Route path="/" exact>
-            <Header />
-            <Home
-              name={name}
-              setName={setName}
-              fetchQuestions={fetchQuestions}
+          <Route path="/startquiz" exact>
+            <Quizzes
             />
           </Route>
 
@@ -39,6 +33,10 @@ function App() {
 
           <Route path="/right">
             <Right />
+          </Route>
+
+          <Route path="/filter">
+            <Filter />
           </Route>
 
         </Switch>

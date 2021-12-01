@@ -1,5 +1,5 @@
 
-import right from "../../assets/right.PNG"
+import right from "./assets/right.PNG"
 import "./Right.css"
 
 const Right = () => {
